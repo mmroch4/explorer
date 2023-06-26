@@ -1,0 +1,19 @@
+{
+  "name": "explorer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mmroch4/explorer.git",
+  "author": {
+    "name": "Miguel Rocha",
+    "email": "miguelrocha.dev@gmail.com",
+    "url": "https://www.miguelrocha.dev"
+  },
+  "license": "MIT",
+  "scripts": {
+    "create:challenge": "node commands/create-challenge.js"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^2.2.0",
+    "zod": "^3.21.4"
+  }
+}
