@@ -1,0 +1,133 @@
+:root {
+  --purple: #2f2e41;
+  --green: #00bfa6;
+  --gray: #c2c2c2;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+
+  background: var(--purple);
+
+  padding: 4.375rem 6.25rem 1.25rem;
+
+  color: var(--white);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  margin-bottom: 6.25rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+
+  list-style: none;
+}
+
+nav ul li a {
+  font-family: "JetBrains Mono", monospace;
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  margin-bottom: 9.75rem;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.75rem;
+}
+
+main section h1 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+main section h1 strong {
+  color: var(--green);
+}
+
+main section p {
+  font-family: "Open Sans", sans-serif;
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+main section p strong {
+  color: var(--green);
+}
+
+main section p span {
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.75rem;
+}
+
+footer hr {
+  width: 35.5rem;
+  height: 0;
+
+  border: none;
+  border-top: 1px solid var(--green);
+}
+
+footer p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+footer p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#padlock-decoration {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+}
