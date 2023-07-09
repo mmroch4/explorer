@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  padding: 3.5rem 2rem;
+
+  font-family: "Noto Serif", serif;
+  color: #a54328;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  max-width: 20rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section.info {
+  gap: 2.875rem;
+}
+
+section.info img {
+  width: 100%;
+  object-fit: cover;
+}
+
+section.info p {
+  font-size: 0.875rem;
+}
+
+section.recipe {
+  gap: 2.25rem;
+}
+
+section.recipe figure {
+  font-size: 0.875rem;
+}
+
+section.recipe figure figcaption {
+  font-weight: 700;
+}
+
+section.recipe button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+
+  background: #a54328;
+
+  padding: 0.75rem;
+
+  border: none;
+  border-radius: 5px;
+
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 4rem;
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 6.25rem;
+
+    max-width: 75rem;
+  }
+
+  section.info {
+    max-width: 28rem;
+  }
+
+  section.recipe {
+    max-width: 33rem;
+  }
+}
