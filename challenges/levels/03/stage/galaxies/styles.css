@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #121214;
+
+  font-family: "Mulish", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.875rem;
+
+  padding: 4.5rem 6.25rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header h1 {
+  color: #02799d;
+  font-size: 3.625rem;
+  font-weight: 900;
+}
+
+header p {
+  color: #e1e1e6;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  column-gap: 3.75rem;
+  row-gap: 2.75rem;
+}
+
+section > div {
+  display: flex;
+  flex-direction: column;
+
+  background: #202024;
+
+  border-radius: 8px;
+  border: 2px solid #323238;
+}
+
+section > div img {
+  width: 100%;
+
+  border-radius: 8px 8px 0 0;
+
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+section > div .info-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  padding: 2rem;
+}
+
+section > div .info-container h2 {
+  color: #e1e1e6;
+
+  font-size: 2.125rem;
+  font-weight: 900;
+}
+
+section > div .info-container p {
+  color: #c4c4cc;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
