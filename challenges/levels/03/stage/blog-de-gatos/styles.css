@@ -207,6 +207,52 @@ footer p {
   font-weight: 600;
 }
 
+header {
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes slide-top-to-bottom {
+  from {
+    transform: translateY(-100%);
+  }
+}
+
+main > img {
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.2;
+  }
+}
+
+aside h2 {
+  animation: slide-right-to-left 100ms ease-in-out;
+}
+
+aside article {
+  --delay: 150ms;
+
+  animation: slide-right-to-left var(--delay) ease-out;
+}
+
+@keyframes slide-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+footer {
+  animation: slide-bottom-to-top 200ms ease-in-out;
+}
+
+@keyframes slide-bottom-to-top {
+  from {
+    transform: translateY(100%);
+  }
+}
+
 @media (min-width: 1280px) {
   body {
     grid-template-areas:
@@ -223,6 +269,8 @@ footer p {
 
   header {
     padding-inline: 7rem;
+
+    animation: slide-top-to-bottom 200ms ease-in-out;
   }
 
   main {
