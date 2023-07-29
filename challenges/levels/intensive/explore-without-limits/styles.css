@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+
+  min-height: 100vh;
+  background: #f9f4fb;
+
+  -webkit-font-smoothing: antialiased;
+  color: #312d64;
+  font-weight: 600;
+}
+
+input,
+button,
+textarea {
+  font-family: "Mulish", sans-serif;
+}
+
+#white-space {
+  display: none;
+}
+
+header,
+header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  padding: 0 2rem 3rem;
+}
+
+header img {
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.125rem;
+
+  color: #b52184;
+  font-weight: 900;
+}
+
+header p {
+  margin-bottom: 2.25rem;
+
+  font-size: 1.25rem;
+}
+
+#planets {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 3rem;
+
+  background: linear-gradient(134deg, #343193 0%, #302c63 100%);
+
+  padding: 3.25rem 2rem;
+}
+
+#planets > div {
+  flex: 1;
+
+  background: #fff;
+
+  padding: 1.5rem;
+
+  border-radius: 20px;
+}
+
+#planets > div img {
+  width: 5rem;
+  height: 5rem;
+
+  margin-bottom: 1.875rem;
+
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+#planets > div h2 {
+  margin-bottom: 0.5rem;
+
+  color: #b52184;
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+
+#contact {
+  padding: 3rem 2rem 4rem;
+}
+
+#contact h2 {
+  margin-bottom: 2.75rem;
+
+  color: #b52184;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#contact form label {
+  position: relative;
+}
+
+#contact form label span {
+  position: absolute;
+  top: 0;
+  left: 0.875rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+#contact form label span img {
+  width: 1.5rem;
+  height: 1.25rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+
+  background: transparent;
+
+  border-radius: 16px;
+  border: 1px solid #312d64;
+}
+
+#contact form input,
+#contact form input::placeholder,
+#contact form textarea,
+#contact form textarea::placeholder {
+  color: #312d64;
+  font-size: 1rem;
+}
+
+#contact form textarea,
+#contact form textarea::placeholder {
+  line-height: 140%;
+}
+
+#contact form input {
+  padding: 0.75rem 1rem 0.75rem 3.125rem;
+}
+
+#contact form textarea {
+  resize: none;
+
+  min-height: 12rem;
+
+  padding: 0.75rem 1rem 1rem;
+}
+
+#contact form button[type="submit"] {
+  width: max-content;
+  background: linear-gradient(134deg, #343193 0%, #302c63 100%);
+
+  padding: 0.5rem 1rem;
+
+  border: none;
+  border-radius: 16px;
+
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+#contact > img {
+  display: none;
+}
+
+footer {
+  background: linear-gradient(134deg, #343193 0%, #302c63 100%);
+
+  padding: 1.5rem 1rem;
+
+  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row-reverse;
+    align-items: stretch;
+  }
+
+  header div,
+  header > img {
+    flex: 1;
+  }
+
+  header div {
+    position: relative;
+
+    align-items: start;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.5rem;
+  }
+
+  header div a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    margin: 0;
+  }
+
+  header > img {
+    width: 100%;
+  }
+
+  #planets {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: clamp(1.5rem, 5vw, 3.75rem);
+  }
+
+  #contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 5.75rem;
+
+    padding: 0;
+  }
+
+  #contact div {
+    flex: 1;
+
+    padding: 6.25rem;
+    padding-right: 0;
+  }
+
+  #contact h2 {
+    font-size: 2.625rem;
+  }
+
+  #contact > img {
+    display: block;
+
+    align-self: flex-end;
+
+    width: clamp(350px, 40%, 644px);
+    object-fit: fill;
+    object-position: bottom right;
+  }
+
+  #planets > div img {
+    width: 6rem;
+    height: 6rem;
+
+    margin-bottom: 2.5rem;
+  }
+}
