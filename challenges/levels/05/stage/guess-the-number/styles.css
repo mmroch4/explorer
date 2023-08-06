@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  appearance: none;
+
+  color: #34355b;
+  font-family: "DM Sans", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(315deg, #c2e9fb 0%, #a1c4fd 100%);
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #34355b;
+  font-family: "DM Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #fff;
+
+  padding: 3rem 4rem;
+
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+  min-width: 18.75rem;
+
+  margin-bottom: 1rem;
+
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main p {
+  margin-bottom: 3rem;
+
+  color: rgba(52, 53, 91, 0.8);
+  text-align: center;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+main form {
+  display: flex;
+  justify-content: center;
+}
+
+main > button {
+  background: #7879f1;
+
+  padding: 1rem;
+
+  border: none;
+  border-radius: 0.25rem;
+
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+main form input,
+main form button {
+  padding: 1rem;
+
+  border: none;
+
+  font-size: 1rem;
+  line-height: normal;
+}
+
+main form input {
+  -moz-appearance: textfield;
+
+  max-width: 4rem;
+  background: #dce2e9;
+
+  border-radius: 0.25rem 0 0 0.25rem;
+
+  text-align: center;
+}
+
+main form button {
+  background: #7879f1;
+
+  border-radius: 0 0.25rem 0.25rem 0;
+
+  font-weight: 700;
+  color: #fff;
+}
