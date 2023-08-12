@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-dancing-script: "Dancing Script", cursive;
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  background-size: 150% 150%;
+
+  font-family: var(--font-montserrat);
+  color: rgba(52, 53, 91, 1);
+
+  animation: gradient 10s linear infinite;
+}
+
+.before,
+.after {
+  box-sizing: content-box;
+
+  width: 18.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #fff;
+
+  border-radius: 0.3125rem;
+  box-shadow: 0 1.25rem 2.5rem 0 rgba(0, 0, 0, 0.8);
+}
+
+.before h1,
+.after h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.before button,
+.after button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.before {
+  padding: 3rem 4rem 4rem;
+}
+
+.before h1 {
+  margin-bottom: 0.875rem;
+}
+
+.before p {
+  margin-bottom: 1.5rem;
+
+  font-family: var(--font-dm-sans);
+  font-size: 0.9375rem;
+}
+
+.before button {
+  background: transparent;
+
+  outline: none;
+}
+
+.before button:hover {
+  animation: vibrate 0.5s linear infinite both;
+}
+
+.after {
+  gap: 1rem;
+
+  padding: 3rem 4rem;
+}
+
+.after blockquote {
+  background: #e4edf1;
+
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+
+  padding: 0.625rem;
+
+  font-family: var(--font-dancing-script);
+  color: #000;
+  font-size: 1.5rem;
+  text-align: center;
+
+  animation: slide-in 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.after div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 200px;
+}
+
+.after button {
+  background: #ff9500;
+
+  border-radius: 0.25rem;
+
+  padding: 1rem;
+
+  color: #fff;
+  font-family: var(--font-dm-sans);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  30% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, -2px);
+  }
+  70% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -2px);
+  }
+  90% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: perspective(180px) translateZ(-120px) translateY(250px);
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+  }
+}
+
+@keyframes gradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
