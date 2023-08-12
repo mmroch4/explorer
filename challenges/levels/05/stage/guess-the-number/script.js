@@ -1,10 +1,10 @@
-const MIN = 8;
+const MIN = 0;
 const MAX = 10;
 const STEP = 1;
 
-const DEFAULT_VALUE = getRandomNumber(MIN, MAX); // Default value `0`
+let DEFAULT_VALUE = getRandomNumber(MIN, MAX); // Default value `0`
 
-const GAME_CONTAINER = document.querySelector("main#game");
+const GAME_CONTAINER = document.body.querySelector("main#game");
 
 const possibleAttemptValues = [];
 
@@ -13,8 +13,6 @@ while (possibleAttemptValues.length < (MAX - MIN) / STEP + 1) {
   possibleAttemptValues.push(ac);
 
   ac += STEP;
-
-  console.log(possibleAttemptValues);
 }
 
 let numberToGuess = DEFAULT_VALUE;
@@ -25,6 +23,16 @@ const possibleAttempts = [...possibleAttemptValues];
 let guessed = false;
 
 setUpGameHTML();
+
+document.addEventListener("keypress", (e) => {
+  const FORM = GAME_CONTAINER.querySelector("form");
+
+  if (e.key === "Enter" && !guessed && FORM) {
+    FORM.requestSubmit ? FORM.requestSubmit() : FORM.submit();
+  } else if (e.key === "Enter" && guessed) {
+    restartGame();
+  }
+});
 
 function play() {
   while (guessed === false) {
@@ -47,7 +55,9 @@ function play() {
 }
 
 function resetSettings() {
-  numberToGuess = DEFAULT_VALUE; // Set to default value
+  DEFAULT_VALUE = getRandomNumber(MIN, MAX); // Set another random default value
+
+  numberToGuess = DEFAULT_VALUE; // Set to the new default value
 
   attempts = 0;
   possibleAttempts.splice(0, possibleAttempts.length, ...possibleAttemptValues);
@@ -76,18 +86,10 @@ function submitForm(e) {
   play();
 }
 
-function setUpSuccessHTML(attempts) {
-  GAME_CONTAINER.innerHTML = `
-    <h1 style="margin-bottom: 2rem;">Acertou em ${attempts} tentativas!</h1>
+function restartGame() {
+  resetSettings();
 
-    <button id="restart-game">Jogar novamente</button>
-  `;
-
-  document.querySelector("#restart-game").addEventListener("click", () => {
-    resetSettings();
-
-    setUpGameHTML();
-  });
+  setUpGameHTML();
 }
 
 function setUpGameHTML() {
@@ -111,7 +113,19 @@ function setUpGameHTML() {
     </form>
   `;
 
-  document.querySelector("form").addEventListener("submit", submitForm);
+  GAME_CONTAINER.querySelector("form").addEventListener("submit", submitForm);
+}
+
+function setUpSuccessHTML(attempts) {
+  GAME_CONTAINER.innerHTML = `
+    <h1 style="margin-bottom: 2rem;">Acertou em ${attempts} tentativas!</h1>
+
+    <button id="restart-game">Jogar novamente</button>
+  `;
+
+  document.body
+    .querySelector("#restart-game")
+    .addEventListener("click", restartGame);
 }
 
 function getRandomNumber(min, max) {
