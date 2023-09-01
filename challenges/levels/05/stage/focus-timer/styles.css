@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --slate-1: hsl(240, 22%, 99%);
+  --slate-2: hsl(240, 20%, 98%);
+  --slate-3: hsl(239, 13.4%, 95.4%);
+  --slate-4: hsl(238, 11.8%, 92.9%);
+  --slate-5: hsl(237, 11.1%, 90.5%);
+  --slate-6: hsl(236, 10.6%, 87.9%);
+  --slate-7: hsl(234, 10.4%, 84.4%);
+  --slate-8: hsl(231, 10.2%, 75.1%);
+  --slate-9: hsl(230, 6%, 57%);
+  --slate-10: hsl(227, 5.2%, 51.8%);
+  --slate-11: hsl(220, 6%, 40%);
+  --slate-12: hsl(210, 12%, 12.5%);
+
+  --indigo-1: hsl(225, 60%, 99.4%);
+  --indigo-2: hsl(223, 100%, 98.6%);
+  --indigo-3: hsl(223, 98.4%, 97.1%);
+  --indigo-4: hsl(223, 92.9%, 95%);
+  --indigo-5: hsl(224, 87.1%, 92%);
+  --indigo-6: hsl(224, 81.9%, 87.8%);
+  --indigo-7: hsl(225, 77.4%, 82.1%);
+  --indigo-8: hsl(226, 75.4%, 74.5%);
+  --indigo-9: hsl(226, 70%, 55.5%);
+  --indigo-10: hsl(226, 58.6%, 51.3%);
+  --indigo-11: hsl(226, 55%, 45%);
+  --indigo-12: hsl(226, 50%, 24%);
+
+  --yellow-1: hsl(60, 54%, 98.5%);
+  --yellow-2: hsl(52, 100%, 93.9%);
+  --yellow-3: hsl(53, 100%, 88.9%);
+  --yellow-4: hsl(53, 93.7%, 83.9%);
+  --yellow-5: hsl(52, 84.7%, 78.7%);
+  --yellow-6: hsl(51, 73%, 72.4%);
+  --yellow-7: hsl(48, 59.6%, 64.3%);
+  --yellow-8: hsl(46, 55%, 52.9%);
+  --yellow-9: hsl(53, 96%, 58%);
+  --yellow-10: hsl(52, 95%, 52%);
+  --yellow-11: hsl(42, 50%, 31%);
+  --yellow-12: hsl(42, 40%, 20%);
+}
+
+body {
+  box-sizing: content-box;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr;
+
+  row-gap: 1rem;
+
+  max-width: 1024px;
+  min-height: 100vh;
+
+  background: var(--slate-1);
+
+  margin: auto;
+  padding: 1rem 2rem;
+
+  font-family: "Roboto", sans-serif;
+  color: var(--slate-12);
+}
+
+body.dark {
+  --slate-1: hsl(240, 5%, 9.8%);
+  --slate-2: hsl(240, 6.9%, 11.4%);
+  --slate-3: hsl(227, 6.7%, 16.4%);
+  --slate-4: hsl(222, 6.6%, 19.4%);
+  --slate-5: hsl(218, 6.5%, 22.1%);
+  --slate-6: hsl(214, 6.4%, 25.1%);
+  --slate-7: hsl(209, 6.2%, 29.4%);
+  --slate-8: hsl(202, 5.8%, 37.5%);
+  --slate-9: hsl(220, 6%, 44%);
+  --slate-10: hsl(218, 5.3%, 51.5%);
+  --slate-11: hsl(220, 7%, 70%);
+  --slate-12: hsl(220, 7%, 93.5%);
+
+  --indigo-1: hsl(229, 24%, 10%);
+  --indigo-2: hsl(230, 36.4%, 12.9%);
+  --indigo-3: hsl(228, 42.7%, 18.1%);
+  --indigo-4: hsl(227, 45.6%, 21.4%);
+  --indigo-5: hsl(227, 47.8%, 24.4%);
+  --indigo-6: hsl(226, 50.3%, 28.8%);
+  --indigo-7: hsl(226, 53.3%, 36.6%);
+  --indigo-8: hsl(226, 60%, 52%);
+  --indigo-9: hsl(226, 70%, 55.5%);
+  --indigo-10: hsl(230, 73.9%, 63.3%);
+  --indigo-11: hsl(235, 100%, 80%);
+  --indigo-12: hsl(235, 93%, 93%);
+
+  --yellow-1: hsl(45, 100%, 5.5%);
+  --yellow-2: hsl(44, 78.9%, 7.5%);
+  --yellow-3: hsl(44, 61.9%, 10.6%);
+  --yellow-4: hsl(44, 57.5%, 13%);
+  --yellow-5: hsl(45, 57%, 15.2%);
+  --yellow-6: hsl(46, 57.5%, 18.3%);
+  --yellow-7: hsl(47, 58.5%, 24%);
+  --yellow-8: hsl(50, 59.8%, 35.1%);
+  --yellow-9: hsl(53, 96%, 58%);
+  --yellow-10: hsl(53, 96.8%, 67.5%);
+  --yellow-11: hsl(55, 100%, 60%);
+  --yellow-12: hsl(53, 100%, 84%);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 0.75rem;
+}
+
+header button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  padding: 0.75rem;
+
+  border-radius: 9999px;
+  border: none;
+}
+
+header button:hover,
+header button:focus {
+  background: var(--slate-4);
+}
+
+header button:active {
+  background: var(--slate-5);
+}
+
+header button[data-theme="light"] {
+  background: var(--yellow-3);
+}
+
+header button[data-theme="light"]:hover,
+header button[data-theme="light"]:focus {
+  background: var(--yellow-4);
+}
+
+header button[data-theme="light"]:active {
+  background: var(--yellow-5);
+}
+
+header button[data-theme="dark"] {
+  background: var(--indigo-3);
+}
+
+header button[data-theme="dark"]:hover,
+header button[data-theme="dark"]:focus {
+  background: var(--indigo-4);
+}
+
+header button[data-theme="dark"]:active {
+  background: var(--indigo-5);
+}
+
+header button > img {
+  width: 2rem;
+  height: 2rem;
+
+  aspect-ratio: 1/1;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12rem;
+}
+
+main section#actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main section#actions h1 {
+  font-size: 8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+main section#actions div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main section#actions div button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  padding: 0.5rem;
+
+  border-radius: 9999px;
+  border: none;
+}
+
+main section#actions div button:hover,
+main section#actions div button:focus {
+  background: var(--slate-4);
+}
+main section#actions div button:active {
+  background: var(--slate-5);
+}
+
+main section#actions div button img {
+  width: 3rem;
+  height: 3rem;
+
+  aspect-ratio: 1/1;
+}
+
+.hide {
+  display: none !important;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus timer</title>
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <button data-sound="off">
+        <img src="./assets/icons/volume-off.svg" alt="" />
+      </button>
+
+      <button data-sound="on" class="hide">
+        <img src="./assets/icons/volume-on.svg" alt="" />
+      </button>
+
+      <button data-theme="light" class="hide">
+        <img src="./assets/icons/light-mode.svg" alt="" />
+      </button>
+
+      <button data-theme="dark">
+        <img src="./assets/icons/dark-mode.svg" alt="" />
+      </button>
+    </header>
+
+    <main>
+      <section id="actions">
+        <h1 id="display">
+          <span id="minutes">00</span>:<span id="seconds">00</span>
+        </h1>
+
+        <div>
+          <button data-action="play">
+            <img src="./assets/icons/play-circle.svg" alt="" />
+          </button>
+
+          <button data-action="pause" class="hide">
+            <img src="./assets/icons/pause-circle.svg" alt="" />
+          </button>
+
+          <button data-action="set">
+            <img src="./assets/icons/timer-circle.svg" alt="" />
+          </button>
+
+          <button data-action="stop" class="hide">
+            <img src="./assets/icons/stop-circle.svg" alt="" />
+          </button>
+
+          <button data-action="add">
+            <img src="./assets/icons/add-circle.svg" alt="" />
+          </button>
+
+          <button data-action="remove">
+            <img src="./assets/icons/remove-circle.svg" alt="" />
+          </button>
+        </div>
+      </section>
+
+      <section id="sound-types">
+        <div data-sound-type="rain">
+          <img src="./assets/icons/rain.svg" alt="" />
+        </div>
+
+        <div data-sound-type="fire">
+          <img src="./assets/icons/fire.svg" alt="" />
+        </div>
+
+        <div data-sound-type="woods">
+          <img src="./assets/icons/woods.svg" alt="" />
+        </div>
+
+        <div data-sound-type="cafe">
+          <img src="./assets/icons/cafe.svg" alt="" />
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js" type="module" defer></script>
+  </body>
+</html>
