@@ -6,14 +6,10 @@ let DEFAULT_VALUE = getRandomNumber(MIN, MAX); // Default value `0`
 
 const GAME_CONTAINER = document.body.querySelector("main#game");
 
-const possibleAttemptValues = [];
-
-let ac = MIN;
-while (possibleAttemptValues.length < (MAX - MIN) / STEP + 1) {
-  possibleAttemptValues.push(ac);
-
-  ac += STEP;
-}
+const possibleAttemptValues = Array.from(
+  { length: (MAX - MIN) / STEP + 1 },
+  (_, i) => MIN + i * STEP
+);
 
 let numberToGuess = DEFAULT_VALUE;
 
