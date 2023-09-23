@@ -14,7 +14,7 @@ export async function search(login) {
     const response = await fetch(encodedUri, {
       headers: {
         Authorization:
-          "Bearer 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",
+          "Bearer REPLACE_ME",
       },
     });
 
